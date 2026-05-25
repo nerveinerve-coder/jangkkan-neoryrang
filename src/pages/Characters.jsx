@@ -12,19 +12,19 @@ export default function Characters() {
 
       <div className="w-full max-w-sm flex flex-col gap-4">
 
-        {/* 서아 — 활성 */}
+        {/* 서아 */}
         <button
-          onClick={() => navigate('/chat')}
+          onClick={() => navigate('/chat?character=seoa')}
           className="w-full bg-[#13131a] border border-[#d4758c33] rounded-2xl p-5 text-left hover:border-[#d4758c66] transition-all"
         >
           <div className="flex items-center gap-4">
             <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#c4788f] to-[#8a5a6e] flex items-center justify-center text-lg font-medium shrink-0">서</div>
             <div className="flex-1">
               <p className="text-[14px] font-medium mb-0.5">서아</p>
-              <p className="text-[11px] text-[#5c5860]">차분하고 다정한 동갑 친구</p>
+              <p className="text-[11px] text-[#5c5860]">차분하고 다정한 여사친</p>
             </div>
             <div className="flex flex-col items-end gap-1">
-              <span className="text-[10px] text-[#d4758c] bg-[#d4758c11] px-2 py-0.5 rounded-full">Day 1</span>
+              <span className="text-[10px] text-[#d4758c] bg-[#d4758c11] px-2 py-0.5 rounded-full">호감도 쉬움</span>
             </div>
           </div>
           <div className="flex gap-2 mt-4">
@@ -34,17 +34,27 @@ export default function Characters() {
           </div>
         </button>
 
-        {/* 하린 — 준비 중 */}
-        <div className="w-full bg-[#13131a] border border-white/5 rounded-2xl p-5 opacity-40">
+        {/* 혜정 */}
+        <button
+          onClick={() => navigate('/chat?character=hyejeong')}
+          className="w-full bg-[#13131a] border border-[#4a6fa533] rounded-2xl p-5 text-left hover:border-[#4a6fa566] transition-all"
+        >
           <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-[#1a1a24] flex items-center justify-center text-lg">🔒</div>
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#4a6fa5] to-[#2d4a7a] flex items-center justify-center text-lg font-medium shrink-0">혜</div>
             <div className="flex-1">
-              <p className="text-[14px] font-medium mb-0.5">하린</p>
-              <p className="text-[11px] text-[#5c5860]">장난기 많은 직장 동료</p>
+              <p className="text-[14px] font-medium mb-0.5">혜정</p>
+              <p className="text-[11px] text-[#5c5860]">독설가 여사친. 호감 얻기 매우 어려움</p>
             </div>
-            <span className="text-[10px] text-[#5c5860] bg-[#1a1a24] px-2 py-0.5 rounded-full">준비 중</span>
+            <div className="flex flex-col items-end gap-1">
+              <span className="text-[10px] text-[#4a6fa5] bg-[#4a6fa511] px-2 py-0.5 rounded-full">호감도 어려움</span>
+            </div>
           </div>
-        </div>
+          <div className="flex gap-2 mt-4">
+            {['독설', '까칠함', '숨겨진 빈틈'].map(tag => (
+              <span key={tag} className="text-[10px] text-[#5c5860] bg-[#1a1a24] px-2 py-1 rounded-full">{tag}</span>
+            ))}
+          </div>
+        </button>
 
         {/* 유나 — 준비 중 */}
         <div className="w-full bg-[#13131a] border border-white/5 rounded-2xl p-5 opacity-40">
